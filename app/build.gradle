@@ -31,6 +31,8 @@ dependencies {
     implementation libs.guava
     implementation("io.ktor:ktor-server-core-jvm:2.3.12")
     implementation("io.ktor:ktor-server-netty-jvm:2.3.12")
+    implementation("io.ktor:ktor-server-html-builder-jvm:2.3.12")
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
