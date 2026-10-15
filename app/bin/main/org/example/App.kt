@@ -1,4 +1,5 @@
 package org.example
+
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
@@ -17,9 +18,8 @@ fun main() {
                         // Import Tailwind CSS biar tampilan langsung cakep
                         script { src = "https://cdn.tailwindcss.com" }
                     }
-                    body {
-                        classes = setOf("bg-slate-900", "text-white", "min-h-screen", "flex", "items-center", "justify-center", "p-6")
-                        
+                    // PERBAIKAN: classes ditaruh langsung di parameter body()
+                    body(classes = "bg-slate-900 text-white min-h-screen flex items-center justify-center p-6") {
                         div(classes = "max-w-md w-full bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-700 text-center") {
                             div(classes = "inline-flex items-center justify-center w-16 h-16 bg-indigo-500/10 text-indigo-400 rounded-full mb-4") {
                                 +"🚀"
